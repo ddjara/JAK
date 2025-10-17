@@ -40,11 +40,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   
+  console.log('Hamburger element:', hamburger);
+  console.log('Nav links element:', navLinks);
+  
   if (hamburger && navLinks) {
+    console.log('Adding click event to hamburger');
     hamburger.addEventListener('click', function(e) {
+      console.log('Hamburger clicked!');
       e.preventDefault();
+      e.stopPropagation();
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('active');
+      console.log('Nav links active:', navLinks.classList.contains('active'));
     });
     
     // Close menu when clicking on a link
@@ -55,5 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.remove('active');
       });
     });
+  } else {
+    console.log('Hamburger or nav-links not found!');
   }
 });

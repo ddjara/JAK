@@ -125,6 +125,8 @@
     flex-direction: column;
     cursor: pointer;
     z-index: 1001;
+    padding: 10px;
+    position: relative;
   }
   
   .bar {
