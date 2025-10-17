@@ -10,31 +10,39 @@ function openLightbox(img) {
 }
 
 // Close lightbox
-document.querySelector('.lightbox-close').onclick = function() {
-  document.getElementById('lightbox').style.display = 'none';
-}
-
-// Close lightbox when clicking outside image
-document.getElementById('lightbox').onclick = function(event) {
-  if (event.target === this) {
-    this.style.display = 'none';
-  }
-}
-
-// Close lightbox with Escape key
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-});
-
-// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightbox = document.getElementById('lightbox');
+  
+  if (lightboxClose) {
+    lightboxClose.onclick = function() {
+      lightbox.style.display = 'none';
+    }
+  }
+
+  // Close lightbox when clicking outside image
+  if (lightbox) {
+    lightbox.onclick = function(event) {
+      if (event.target === this) {
+        this.style.display = 'none';
+      }
+    }
+  }
+
+  // Close lightbox with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  // Mobile menu toggle
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   
   if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', function(e) {
+      e.preventDefault();
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('active');
     });
