@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Kufuor Foundation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <!-- Same header -->
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Kufuor Legacy</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="speeches.html">Speeches</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Contact Us</h1>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+        <div>
+          <h2>Get in Touch</h2>
+          <p>For speaking engagements, partnerships, or general inquiries.</p>
+          <p><strong>Address:</strong> Kufuor Foundation, Liberation Road, Accra, Ghana</p>
+          <p><strong>Email:</strong> info@kufuorfoundation.org</p>
+          <p><strong>Phone:</strong> +233 30 222 0000</p>
+        </div>
+
+        <div>
+          <form>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject">
+                <option>Speaking Engagement</option>
+                <option>Partnership Inquiry</option>
+                <option>General Contact</option>
+                <option>Media Request</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Same footer -->
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Kufuor Foundation</h3>
+          <p>Promoting leadership, health, and sustainable development in Africa.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>info@kufuorfoundation.org</p>
+          <p>+233 30 222 0000</p>
+          <p>Accra, Ghana</p>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#">𝕏</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p>&copy; 2024 Kufuor Foundation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
