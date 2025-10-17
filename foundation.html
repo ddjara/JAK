@@ -7,6 +7,25 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      console.log('Hamburger:', hamburger);
+      console.log('Nav Links:', navLinks);
+      
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          console.log('Hamburger clicked!');
+          if (navLinks) {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+          }
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
