@@ -1,3 +1,21 @@
+// Video modal functionality
+function openVideoModal(videoId, startTime = 0) {
+  const modal = document.getElementById('videoModal');
+  const iframe = document.getElementById('videoFrame');
+  const startParam = startTime ? `&start=${startTime}` : '';
+  
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1${startParam}`;
+  modal.style.display = 'block';
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById('videoModal');
+  const iframe = document.getElementById('videoFrame');
+  
+  iframe.src = '';
+  modal.style.display = 'none';
+}
+
 // Lightbox functionality
 function openLightbox(img) {
   const lightbox = document.getElementById('lightbox');
@@ -34,7 +52,26 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.key === 'Escape' && lightbox) {
       lightbox.style.display = 'none';
     }
+    if (event.key === 'Escape') {
+      closeVideoModal();
+    }
   });
+
+  // Video modal close button
+  const videoModalClose = document.querySelector('.video-modal-close');
+  const videoModal = document.getElementById('videoModal');
+  
+  if (videoModalClose) {
+    videoModalClose.onclick = closeVideoModal;
+  }
+  
+  if (videoModal) {
+    videoModal.onclick = function(event) {
+      if (event.target === this) {
+        closeVideoModal();
+      }
+    }
+  }
 
   // Mobile menu toggle
   const hamburger = document.querySelector('.hamburger');
