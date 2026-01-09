@@ -1942,6 +1942,29 @@
     margin-top: 60px;
   }
   
+  /* Text Justification */
+  .bio-text p,
+  .legacy-text p,
+  .overview-text p,
+  .about-description,
+  .foundation-description,
+  .lecture-content p,
+  .speech-card p,
+  .publication-card p,
+  .documentary-item p,
+  .personal-card p,
+  .role-item p,
+  .impact-card p,
+  .testimonial-card p,
+  .support-card p,
+  .activity-item p,
+  .achievement-card p,
+  .mission-card p,
+  .program-text p {
+    text-align: justify;
+    line-height: 1.7;
+  }
+  
   .footer-content {
     display: flex;
     flex-wrap: wrap;
