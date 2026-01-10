@@ -503,7 +503,7 @@
   }
   
   .stat-item p {
-    color: var(--primary);
+    color: var(--dark) !important;
     font-weight: 600;
   }
   
